@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in rack-health_check.gemspec
+# Specify your gem's dependencies in rack-ok.gemspec
 gemspec
 
 gem 'rack-test'

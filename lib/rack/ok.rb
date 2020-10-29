@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require 'rack/health_check/version'
+require 'rack/ok/version'
 
 module Rack
-  class HealthCheck
+  class Ok
     DEFAULT_REQUEST_PATH = '/health'
 
     DEFAULT_RESPONSE_BODY = 'OK'

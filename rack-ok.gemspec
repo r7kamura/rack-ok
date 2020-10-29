@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-require_relative 'lib/rack/health_check/version'
+require_relative 'lib/rack/ok/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'rack-health_check'
-  spec.version       = Rack::HealthCheck::VERSION
+  spec.name          = 'rack-ok'
+  spec.version       = Rack::Ok::VERSION
   spec.authors       = ['Ryo Nakamura']
   spec.email         = ['r7kamura@gmail.com']
 
   spec.summary       = 'Rack middleware to respond to health check request.'
-  spec.homepage      = 'https://github.com/r7kamura/rack-health_check'
+  spec.homepage      = 'https://github.com/r7kamura/rack-ok'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.4.0')
 

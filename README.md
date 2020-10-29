@@ -1,6 +1,6 @@
-# Rack::HealthCheck
+# Rack::Ok
 
-[![](https://github.com/r7kamura/rack-health_check/workflows/.github/workflows/test.yml/badge.svg)](https://github.com/r7kamura/rack-health_check/actions?query=workflow%3A.github%2Fworkflows%2Ftest.yml)
+[![](https://github.com/r7kamura/rack-ok/workflows/.github/workflows/test.yml/badge.svg)](https://github.com/r7kamura/rack-ok/actions?query=workflow%3A.github%2Fworkflows%2Ftest.yml)
 
 Rack middleware to respond to health check request.
 
@@ -9,7 +9,7 @@ Rack middleware to respond to health check request.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rack-health_check'
+gem 'rack-ok'
 ```
 
 And then execute:
@@ -19,28 +19,28 @@ bundle install
 ```
 
 ```sh
-gem install rack-health_check
+gem install rack-ok
 ```
 
 ## Usage
 
-Insert `Rack::HealthCheck` to your rack middleware, and the app will respond to `GET /health` with 200 OK.
+Insert `Rack::Ok` to your rack middleware, and the app will respond to `GET /health` with 200 OK.
 
 ### For Rails
 
 Insert this before at least ActionDispatch::SSL (enabled by config.force_ssl) to prevent request from being redirected.
 
 ```ruby
-# config/initializers/health_check.rb
-Rails.configuration.middleware.insert(0, Rack::HealthCheck)
+# config/initializers/ok.rb
+Rails.configuration.middleware.insert(0, Rack::Ok)
 ```
 
 ### For Rack
 
 ```ruby
 # config.ru
-require 'rack/health_check'
-use Rack::HealthCheck
+require 'rack/ok'
+use Rack::Ok
 ```
 
 ### Customization
@@ -52,9 +52,9 @@ Supports these options:
 
 ```ruby
 use(
-  Rack::HealthCheck,
+  Rack::Ok,
   body: 'Custom response body',
-  path: '/custom_health_check_path',
+  path: '/custom_ok_path',
 )
 ```
 
@@ -78,7 +78,7 @@ To release a new version, update the version number in `version.rb`, and then ru
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/r7kamura/rack-health_check.
+Bug reports and pull requests are welcome on GitHub at https://github.com/r7kamura/rack-ok.
 
 ## Acknowledgements
 

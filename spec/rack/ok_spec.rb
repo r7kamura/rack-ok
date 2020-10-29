@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 require 'rack/builder'
-require 'rack/health_check'
+require 'rack/ok'
 require 'rack/lint'
 require 'rack/test'
 
-RSpec.describe Rack::HealthCheck do
+RSpec.describe Rack::Ok do
   include Rack::Test::Methods
 
   subject do
@@ -16,7 +16,7 @@ RSpec.describe Rack::HealthCheck do
     options = self.options
     Rack::Builder.app do
       use Rack::Lint
-      use Rack::HealthCheck, **options
+      use Rack::Ok, **options
       run lambda { |_env|
         [
           200,
@@ -63,7 +63,7 @@ RSpec.describe Rack::HealthCheck do
     end
 
     let(:path) do
-      '/health_check'
+      '/ok'
     end
 
     it 'responds to custom path' do

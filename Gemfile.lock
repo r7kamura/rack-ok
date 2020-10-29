@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rack-health_check (0.1.0)
+    rack-ok (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -49,7 +49,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  rack-health_check!
+  rack-ok!
   rack-test
   rake (~> 12.0)
   rspec (~> 3.0)
