@@ -18,6 +18,8 @@ And then execute:
 bundle install
 ```
 
+Or install it yourself as:
+
 ```sh
 gem install rack-ok
 ```
