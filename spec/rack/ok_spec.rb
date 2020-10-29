@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 require 'rack/builder'
-require 'rack/ok'
 require 'rack/lint'
+require 'rack/ok'
 require 'rack/test'
 
 RSpec.describe Rack::Ok do
