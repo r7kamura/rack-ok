@@ -61,6 +61,9 @@ To release a new version, update the version number in `version.rb`, and then ru
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/r7kamura/rack-health_check.
 
+## Acknowledgements
+
+This gem is heavily inspired by [rack-health](https://github.com/mirakui/rack-health).
 
 ## License
 
