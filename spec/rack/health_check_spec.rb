@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rack/builder'
 require 'rack/health_check'
 require 'rack/lint'
@@ -15,7 +17,7 @@ RSpec.describe Rack::HealthCheck do
     Rack::Builder.app do
       use Rack::Lint
       use Rack::HealthCheck, **options
-      run -> (env) {
+      run lambda { |_env|
         [
           200,
           {
