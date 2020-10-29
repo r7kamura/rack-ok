@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Ryo Nakamura']
   spec.email         = ['r7kamura@gmail.com']
 
-  spec.summary       = 'A rack middleware to respond to health check request.'
+  spec.summary       = 'Rack middleware to respond to health check request.'
   spec.homepage      = 'https://github.com/r7kamura/rack-health_check'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.4.0')

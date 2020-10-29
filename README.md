@@ -2,7 +2,7 @@
 
 [![](https://github.com/r7kamura/rack-health_check/workflows/.github/workflows/test.yml/badge.svg)](https://github.com/r7kamura/rack-health_check/actions?query=workflow%3A.github%2Fworkflows%2Ftest.yml)
 
-A rack middleware to respond to health check request.
+Rack middleware to respond to health check request.
 
 ## Installation
 
