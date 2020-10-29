@@ -1,11 +1,89 @@
-# frozen_string_literal: true
+require 'rack/builder'
+require 'rack/health_check'
+require 'rack/lint'
+require 'rack/test'
 
 RSpec.describe Rack::HealthCheck do
-  it 'has a version number' do
-    expect(Rack::HealthCheck::VERSION).not_to be nil
+  include Rack::Test::Methods
+
+  subject do
+    get(path)
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  let(:app) do
+    options = self.options
+    Rack::Builder.app do
+      use Rack::Lint
+      use Rack::HealthCheck, **options
+      run -> (env) {
+        [
+          200,
+          {
+            'Content-Type' => 'text/plain'
+          },
+          %w[Origin]
+        ]
+      }
+    end
+  end
+
+  let(:options) do
+    {}
+  end
+
+  let(:path) do
+    '/health'
+  end
+
+  context 'with non health check request' do
+    let(:path) do
+      '/'
+    end
+
+    it 'returns original response' do
+      subject
+      expect(last_response.status).to eq(200)
+      expect(last_response.body).to eq('Origin')
+    end
+  end
+
+  context 'with health check request' do
+    it 'returns response for health check' do
+      subject
+      expect(last_response.status).to eq(200)
+      expect(last_response.body).to eq('OK')
+    end
+  end
+
+  context 'with custom path option' do
+    before do
+      options[:path] = path
+    end
+
+    let(:path) do
+      '/health_check'
+    end
+
+    it 'responds to custom path' do
+      subject
+      expect(last_response.status).to eq(200)
+      expect(last_response.body).to eq('OK')
+    end
+  end
+
+  context 'with custom body option' do
+    before do
+      options[:body] = body
+    end
+
+    let(:body) do
+      'It works!'
+    end
+
+    it 'returns custom body' do
+      subject
+      expect(last_response.status).to eq(200)
+      expect(last_response.body).to eq(body)
+    end
   end
 end
