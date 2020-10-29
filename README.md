@@ -27,7 +27,7 @@ gem install rack-ok
 
 ## Usage
 
-Insert `Rack::Ok` to your rack middleware, and the app will respond to `GET /health` with 200 OK.
+Insert `Rack::Ok` to your rack middleware stack, and the app will respond to `GET /health` with 200 OK.
 
 ### For Rails
 
