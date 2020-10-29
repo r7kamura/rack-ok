@@ -12,11 +12,13 @@ gem 'rack-health_check'
 
 And then execute:
 
-    $ bundle install
+```sh
+bundle install
+```
 
-Or install it yourself as:
-
-    $ gem install rack-health_check
+```sh
+gem install rack-health_check
+```
 
 ## Usage
 
