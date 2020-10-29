@@ -2,7 +2,7 @@
 
 [![](https://github.com/r7kamura/rack-ok/workflows/.github/workflows/test.yml/badge.svg)](https://github.com/r7kamura/rack-ok/actions?query=workflow%3A.github%2Fworkflows%2Ftest.yml)
 
-Rack middleware to respond to health check request.
+Rack middleware to return OK for health check.
 
 ## Installation
 
