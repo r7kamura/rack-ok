@@ -1,4 +1,6 @@
-require "rack/health_check/version"
+# frozen_string_literal: true
+
+require 'rack/health_check/version'
 
 module Rack
   module HealthCheck
