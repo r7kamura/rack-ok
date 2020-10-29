@@ -13,6 +13,6 @@ jobs:
           ruby-version: '2.7.2'
       - run: bundle install --jobs=$(($(nproc) - 1)) --retry=3
       - run: bundle exec rubocop --color --parallel
-      - run: bundle exec rspec
+      - run: bundle exec rspec --force-color
 
 
