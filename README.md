@@ -20,6 +20,8 @@ Or install it yourself as:
 
 ## Usage
 
+Insert `Rack::HealthCheck` to your rack middleware, and the app will respond to `GET /health` with 200 OK.
+
 ### For Rails
 
 Insert this before at least ActionDispatch::SSL (enabled by config.force_ssl) to prevent request from being redirected.
@@ -39,9 +41,22 @@ use Rack::HealthCheck
 
 ### Customization
 
+Supports these options:
+
+- `:body` (default: `"OK"`)
+- `:path` (default: `"/health"`)
+
 ```ruby
-use Rack::HealthCheck, path: '/my_custom_health_check_path'
+use(
+  Rack::HealthCheck,
+  body: 'Custom response body',
+  path: '/custom_health_check_path',
+)
 ```
+
+This gem is designed to easily handle health checks on Rack application,
+and is not suitable for complex situations where you need to return non-static response.
+In those cases, it's better to make your own for your domain.
 
 ## Development
 
