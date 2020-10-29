@@ -60,10 +60,6 @@ use(
 )
 ```
 
-This gem is designed to easily handle health checks on Rack application,
-and is not suitable for complex situations where you need to return non-static response.
-In those cases, it's better to make your own for your domain.
-
 ## Development
 
 ### Setup
