@@ -34,7 +34,7 @@ Insert `Rack::Ok` to your rack middleware stack, and the app will respond to `GE
 Insert this before at least ActionDispatch::SSL (enabled by config.force_ssl) to prevent request from being redirected.
 
 ```ruby
-# config/initializers/ok.rb
+# config/initializers/health_check.rb
 Rails.configuration.middleware.insert(0, Rack::Ok)
 ```
 
