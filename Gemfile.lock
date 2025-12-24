@@ -15,7 +15,7 @@ GEM
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rainbow (3.0.0)
-    rake (12.3.3)
+    rake (13.3.1)
     regexp_parser (1.8.2)
     rexml (3.2.4)
     rspec (3.9.0)
@@ -51,7 +51,7 @@ PLATFORMS
 DEPENDENCIES
   rack-ok!
   rack-test
-  rake (~> 12.0)
+  rake
   rspec (~> 3.0)
   rubocop
 
