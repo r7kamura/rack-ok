@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rack-ok (0.1.0)
+    rack-ok (0.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -66,4 +66,4 @@ DEPENDENCIES
   rubocop
 
 BUNDLED WITH
-   4.0.3
+   2.6.9
