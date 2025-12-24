@@ -1,8 +1,5 @@
 # Rack::Ok
 
-[![](https://badge.fury.io/rb/rack-ok.svg)](https://rubygems.org/gems/rack-ok)
-[![](https://github.com/r7kamura/rack-ok/workflows/.github/workflows/test.yml/badge.svg)](https://github.com/r7kamura/rack-ok/actions?query=workflow%3A.github%2Fworkflows%2Ftest.yml)
-
 Rack middleware to return OK.
 
 ## Installation
