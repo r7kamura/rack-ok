@@ -26,10 +26,10 @@ module Rack
     def call(env)
       if env['PATH_INFO'] == @path
         [
-          '200',
+          200,
           {
-            'Content-Length' => @body.bytesize.to_s,
-            'Content-Type' => 'text/plain'
+            'content-length' => @body.bytesize.to_s,
+            'content-type' => 'text/plain'
           },
           [@body]
         ]
