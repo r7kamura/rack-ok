@@ -21,7 +21,7 @@ RSpec.describe Rack::Ok do
         [
           200,
           {
-            'Content-Type' => 'text/plain'
+            'content-type' => 'text/plain'
           },
           %w[Origin]
         ]
